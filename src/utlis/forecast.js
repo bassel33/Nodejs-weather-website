@@ -16,7 +16,7 @@ const forecast = (latitude , longitude , callback)=>
             callback('wrong latitude',undefined)
 
         }else{
-            callback(undefined,list[0].weather[0].description + ' It is currently ' + list[0].main.temp + ' degrees out')
+            callback(undefined,list[0].weather[0].description + ' It is currently ' + list[0].main.temp + ' degrees out and the humidity is ' + list[0].main.humidity )
         }
         
 
