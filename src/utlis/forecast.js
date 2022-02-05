@@ -13,7 +13,7 @@ const forecast = (latitude , longitude , callback)=>
         }
         else if(response.body.cod===400)
         {
-            callback('wrong latitude')
+            callback('wrong latitude',undefined)
 
         }else{
             callback(undefined,list[0].weather[0].description + ' It is currently ' + list[0].main.temp + ' degrees out')

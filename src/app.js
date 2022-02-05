@@ -12,7 +12,10 @@ const partialsPath = path.join(__dirname, '../templates/partials')
 
 //express config
 const app = express()
- 
+
+// to save  the port in which changes form the enviornment we are using rn (heroku) 
+
+const port = process.env.PORT || 3000
 // Setup handlers engine and views location
 app.set('view engine','hbs')
 app.set('views', viewsPath)
@@ -146,7 +149,7 @@ app.get('*',(req , res)=>{
 
 
 
-app.listen(3000 , ()=>{
+app.listen(port , ()=>{
 
-    console.log('the server is deployed on port 3000 ')
+    console.log('the server is deployed on port ' + port)
 })
